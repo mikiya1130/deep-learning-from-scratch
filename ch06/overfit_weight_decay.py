@@ -1,8 +1,8 @@
+# %%
 # coding: utf-8
 import os
 import sys
-
-sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
+sys.path.append(os.pardir)  # nopep8 親ディレクトリのファイルをインポートするための設定
 import numpy as np
 import matplotlib.pyplot as plt
 from dataset.mnist import load_mnist
@@ -16,7 +16,7 @@ x_train = x_train[:300]
 t_train = t_train[:300]
 
 # weight decay（荷重減衰）の設定 =======================
-#weight_decay_lambda = 0 # weight decayを使用しない場合
+# weight_decay_lambda = 0 # weight decayを使用しない場合
 weight_decay_lambda = 0.1
 # ====================================================
 
@@ -49,7 +49,8 @@ for i in range(1000000000):
         train_acc_list.append(train_acc)
         test_acc_list.append(test_acc)
 
-        print("epoch:" + str(epoch_cnt) + ", train acc:" + str(train_acc) + ", test acc:" + str(test_acc))
+        print("epoch:" + str(epoch_cnt) + ", train acc:" +
+              str(train_acc) + ", test acc:" + str(test_acc))
 
         epoch_cnt += 1
         if epoch_cnt >= max_epochs:
