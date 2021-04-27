@@ -1,11 +1,11 @@
 # %%
 # coding: utf-8
-from PIL import Image
-from dataset.mnist import load_mnist
-import numpy as np
 import sys
 import os
-sys.path.append(os.pardir)  # 親ディレクトリのファイルをインポートするための設定
+sys.path.append(os.pardir)  # nopep8 親ディレクトリのファイルをインポートするための設定
+import numpy as np
+from dataset.mnist import load_mnist
+from PIL import Image
 
 
 def img_show(img):
